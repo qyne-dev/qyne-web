@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://qyne.in/sitemap.xml
