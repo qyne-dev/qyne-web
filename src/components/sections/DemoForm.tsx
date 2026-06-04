@@ -46,7 +46,7 @@ function ThankYou({ academy }: { academy: string }) {
         working days to set up your demo.
       </p>
       <a
-        href={`mailto:${SITE.demoEmail}`}
+        href={`mailto:${SITE.email}`}
         className="mt-5 text-sm font-medium text-primary transition-colors hover:text-primary-light"
       >
         Or email us directly →

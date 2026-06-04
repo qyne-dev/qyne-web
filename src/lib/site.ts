@@ -10,8 +10,7 @@ export const SITE = {
   description:
     'Qyne generates coach-approved strength & conditioning plans for cricket and badminton academies in India.',
   locations: 'Bangalore · Hyderabad · India',
-  demoEmail: 'hello@qyne.in',
-  careersEmail: 'careers@qyne.in',
+  email: 'support@qyne.in',
 } as const
 
 /** Primary navigation — used by Nav and the demo CTA. */
@@ -47,9 +46,9 @@ export const FOOTER_COLUMNS = [
     title: 'Product',
     links: [
       { label: 'How it works', href: '/how-it-works' },
-      { label: 'Features', href: '/for-academies' },
+      { label: 'For academies', href: '/for-academies' },
+      { label: 'For athletes', href: '/for-athletes' },
       { label: 'Wearables', href: '/how-it-works#wearables' },
-      { label: 'Roadmap', href: '/about#roadmap' },
     ],
   },
   {
@@ -62,12 +61,21 @@ export const FOOTER_COLUMNS = [
     ],
   },
   {
+    title: 'Support',
+    links: [
+      { label: 'Help centre', href: '/support' },
+      { label: 'Status', href: '/support#status' },
+      { label: 'Contact', href: 'mailto:support@qyne.in' },
+      { label: 'Security report', href: '/security#disclosure' },
+    ],
+  },
+  {
     title: 'Legal',
     links: [
-      { label: 'Privacy', href: '/about#privacy' },
-      { label: 'Terms', href: '/about#terms' },
-      { label: 'DPDP compliance', href: '/for-athletes#privacy' },
-      { label: 'Contact', href: 'mailto:hello@qyne.in' },
+      { label: 'Privacy', href: '/privacy' },
+      { label: 'Terms', href: '/terms' },
+      { label: 'Security', href: '/security' },
+      { label: 'DPDP compliance', href: '/privacy#minors' },
     ],
   },
 ] as const
