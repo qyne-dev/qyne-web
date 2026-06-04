@@ -1,0 +1,79 @@
+import type { LucideIcon } from 'lucide-react'
+import { GraduationCap, ClipboardCheck, ShieldCheck, Activity } from 'lucide-react'
+import { Section } from '../primitives/Container'
+import { SectionHeading } from '../primitives/SectionHeading'
+import { Card } from '../primitives/Card'
+import { Stagger } from '../animations/ScrollReveal'
+import { WEARABLES } from '../../lib/site'
+
+interface Credential {
+  icon: LucideIcon
+  title: string
+  body: string
+  brands?: boolean
+}
+
+const CREDENTIALS: Credential[] = [
+  {
+    icon: GraduationCap,
+    title: 'Credentialed sports science',
+    body: 'An NCA-alum Head of Sports Science reviews the rules behind every plan. Recommendations are credentialed-human-approved — never algorithm-alone.',
+  },
+  {
+    icon: ClipboardCheck,
+    title: 'Coach-approved, on the record',
+    body: 'No plan reaches an athlete until your head coach approves it. Every approval is captured in a timestamped audit trail.',
+  },
+  {
+    icon: ShieldCheck,
+    title: 'DPDP Act compliant',
+    body: 'Athletes under 18 are onboarded with verifiable parental consent, in line with India’s Digital Personal Data Protection Act.',
+  },
+  {
+    icon: Activity,
+    title: 'Multi-wearable integration',
+    body: 'Every data source is confidence-weighted, so a budget band never skews a plan the way a clinical-grade strap would.',
+    brands: true,
+  },
+]
+
+export function Credibility() {
+  return (
+    <Section className="border-t border-border">
+      <SectionHeading
+        align="center"
+        eyebrow="Credibility"
+        title="Designed with credentialed S&C coaches. Compliant with the DPDP Act."
+        description="We respect coaches, athletes, and the parents who trust us with their kids. That shows up in how Qyne is built."
+      />
+
+      <Stagger className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+        {CREDENTIALS.map((c) => (
+          <Stagger.Item key={c.title} className="h-full">
+            <Card className="flex h-full flex-col p-6">
+              <div className="grid h-10 w-10 place-items-center rounded-md border border-border bg-surface-2">
+                <c.icon size={18} className="text-primary" />
+              </div>
+              <h3 className="mt-5 text-[1.05rem] font-medium tracking-tight text-ink">
+                {c.title}
+              </h3>
+              <p className="mt-2 text-[14px] leading-[1.6] text-muted">{c.body}</p>
+              {c.brands && (
+                <div className="mt-4 flex flex-wrap gap-1.5 border-t border-border pt-4">
+                  {WEARABLES.slice(0, 6).map((b) => (
+                    <span
+                      key={b}
+                      className="rounded border border-border px-1.5 py-0.5 font-mono text-[10px] text-faint"
+                    >
+                      {b}
+                    </span>
+                  ))}
+                </div>
+              )}
+            </Card>
+          </Stagger.Item>
+        ))}
+      </Stagger>
+    </Section>
+  )
+}
