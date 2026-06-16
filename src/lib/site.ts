@@ -42,6 +42,7 @@ export const FOOTER_COLUMNS = [
       { label: 'Assessments', href: '/#assessments' },
       { label: 'Cricket intelligence', href: '/#cricket' },
       { label: 'Wearable', href: '/#wearable' },
+      { label: 'Get the app', href: '/#app' },
     ],
   },
   {

@@ -6,6 +6,7 @@ import { PlatformData } from '../components/sections/PlatformData'
 import { PeriodizationEngine } from '../components/sections/PeriodizationEngine'
 import { Assessments } from '../components/sections/Assessments'
 import { CricketIntelligence } from '../components/sections/CricketIntelligence'
+import { AppLaunch } from '../components/sections/AppLaunch'
 import { AcademiesPreview } from '../components/sections/AcademiesPreview'
 import { Credibility } from '../components/sections/Credibility'
 import { CTA } from '../components/sections/CTA'
@@ -27,6 +28,7 @@ export default function Home() {
       <PeriodizationEngine />
       <Assessments />
       <CricketIntelligence />
+      <AppLaunch />
       <AcademiesPreview />
       <Credibility />
       <CTA />

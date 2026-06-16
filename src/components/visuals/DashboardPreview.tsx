@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { BrainCircuit } from 'lucide-react'
 import { RecoveryRing } from './RecoveryRing'
+import { PhoneFrame } from './PhoneFrame'
 import { HrvWaveform } from './HrvWaveform'
 import { PulseRing } from '../animations/PulseRing'
 import { EASE } from '../animations/ScrollReveal'
@@ -48,20 +49,22 @@ export function DashboardPreview() {
       initial={{ opacity: 0, y: 28 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, ease: EASE, delay: 0.15 }}
-      className="relative mx-auto w-full max-w-[400px]"
+      className="relative mx-auto w-full max-w-[330px]"
     >
-      {/* Floating credential tag */}
+      {/* Floating credential tag — peeks out beside the phone */}
       <motion.div
         initial={{ opacity: 0, scale: 0.92, y: 6 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ duration: 0.4, ease: EASE, delay: 1.7 }}
-        className="absolute -right-3 -top-3 z-10 flex items-center gap-1.5 rounded-md border border-primary/30 bg-primary-bg px-2.5 py-1.5"
+        className="absolute -right-3 top-16 z-20 flex items-center gap-1.5 rounded-md border border-primary/30 bg-primary-bg px-2.5 py-1.5 shadow-lg shadow-black/30"
       >
         <BrainCircuit size={13} className="text-primary" />
         <span className="label text-primary">Periodized</span>
       </motion.div>
 
-      <div className="rounded-lg border border-border bg-surface p-5 sm:p-6">
+      <PhoneFrame>
+        {/* Screen */}
+        <div className="px-5 pb-6 pt-9">
         {/* Header */}
         <div className="flex items-center justify-between">
           <span className="flex items-center gap-2">
@@ -141,7 +144,8 @@ export function DashboardPreview() {
           </span>
           <span className="font-mono text-[12px] text-ink">Strength · Bowling skill</span>
         </div>
-      </div>
+        </div>
+      </PhoneFrame>
     </motion.div>
   )
 }

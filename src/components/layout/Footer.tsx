@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { Logo } from '../primitives/Logo'
 import { Container } from '../primitives/Container'
+import { StoreBadge } from '../primitives/StoreBadge'
 import { FOOTER_COLUMNS, SITE } from '../../lib/site'
 
 /** Renders an internal route link or an external/mailto anchor. */
@@ -33,6 +34,14 @@ export function Footer() {
             <p className="mt-4 font-mono text-[11px] tracking-wide text-faint">
               {SITE.locations}
             </p>
+
+            <div className="mt-6">
+              <h3 className="label text-faint">Get the app</h3>
+              <div className="mt-3 flex flex-col gap-2.5 sm:flex-row sm:flex-wrap">
+                <StoreBadge store="apple" />
+                <StoreBadge store="google" />
+              </div>
+            </div>
           </div>
 
           {FOOTER_COLUMNS.map((column) => (

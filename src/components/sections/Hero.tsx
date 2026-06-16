@@ -3,6 +3,7 @@ import { motion, type Variants } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 import { Container } from '../primitives/Container'
 import { buttonVariants } from '../primitives/Button'
+import { StoreBadge } from '../primitives/StoreBadge'
 import { DashboardPreview } from '../visuals/DashboardPreview'
 import { EASE } from '../animations/ScrollReveal'
 
@@ -71,6 +72,15 @@ export function Hero() {
                   className="transition-transform group-hover:translate-x-0.5"
                 />
               </Link>
+            </motion.div>
+
+            {/* App coming soon — iOS & Android */}
+            <motion.div variants={item} className="mt-9">
+              <span className="label text-faint">The QYNE app is coming soon</span>
+              <div className="mt-3 flex flex-wrap items-center gap-3">
+                <StoreBadge store="apple" />
+                <StoreBadge store="google" />
+              </div>
             </motion.div>
           </motion.div>
 
