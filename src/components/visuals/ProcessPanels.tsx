@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import { Check, TriangleAlert } from 'lucide-react'
+import { Check } from 'lucide-react'
 import { cn } from '../../lib/utils'
 
 /** Shared chrome for every process step mock. */
@@ -125,48 +125,47 @@ export function ProposePanel() {
   )
 }
 
-const REVIEW = [
-  { name: 'Arjun R.', score: 82, adjusted: false },
-  { name: 'Meera K.', score: 74, adjusted: false },
-  { name: 'Rohan S.', score: 61, adjusted: true },
+const PROGRESS = [
+  { week: 'W1', value: 0.42 },
+  { week: 'W2', value: 0.5 },
+  { week: 'W3', value: 0.61 },
+  { week: 'W4', value: 0.58 },
+  { week: 'W5', value: 0.72 },
+  { week: 'W6', value: 0.84 },
 ]
 
-export function ApprovePanel() {
+export function ProgressPanel() {
+  const w = 100
+  const h = 56
+  const step = w / (PROGRESS.length - 1)
+  const points = PROGRESS.map((p, i) => `${i * step},${h - p.value * h}`)
   return (
-    <PanelShell label="Monday coach review">
-      <div className="-my-0.5">
-        {REVIEW.map((r, i) => (
-          <div
-            key={r.name}
-            className={cn(
-              'flex items-center justify-between py-2.5',
-              i < REVIEW.length - 1 && 'border-b border-border',
-            )}
-          >
-            <span className="text-[13px] text-ink">{r.name}</span>
-            <span className="flex items-center gap-3">
-              <span className="font-mono text-[12px] text-muted">{r.score}</span>
-              {r.adjusted ? (
-                <span className="flex w-[78px] items-center gap-1 text-[11px] text-warning">
-                  <TriangleAlert size={12} />
-                  Adjusted
-                </span>
-              ) : (
-                <span className="flex w-[78px] items-center gap-1 text-[11px] text-primary">
-                  <Check size={12} />
-                  Approved
-                </span>
-              )}
-            </span>
-          </div>
+    <PanelShell label="Performance over time">
+      <svg viewBox={`0 0 ${w} ${h}`} className="h-28 w-full" fill="none" aria-hidden="true">
+        <polyline
+          points={`0,${h} ${points.join(' ')} ${w},${h}`}
+          fill="var(--color-primary)"
+          fillOpacity="0.1"
+        />
+        <polyline
+          points={points.join(' ')}
+          stroke="var(--color-primary)"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        {PROGRESS.map((p, i) => (
+          <circle key={p.week} cx={i * step} cy={h - p.value * h} r="2.2" fill="var(--color-primary)" />
         ))}
-      </div>
+      </svg>
       <div className="mt-3 flex items-center justify-between border-t border-border pt-3">
-        <span className="text-[12px] text-faint">24 athletes · 15 min</span>
-        <span className="rounded-md bg-primary px-2.5 py-1 text-[11px] font-medium text-bg">
-          Approve all
+        <span className="text-[12px] text-faint">Readiness trending up · 6 weeks</span>
+        <span className="flex items-center gap-1 font-mono text-[11px] text-primary">
+          <Check size={12} />
+          On plan
         </span>
       </div>
     </PanelShell>
   )
 }
+

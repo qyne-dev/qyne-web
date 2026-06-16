@@ -6,11 +6,11 @@
 export const SITE = {
   name: 'Qyne',
   legalName: 'Qyne Technologies Pvt Ltd',
-  tagline: 'The S&C department your academy can’t afford to hire.',
+  tagline: 'If you have a body, you are an athlete. QYNE is the intelligence to train like one.',
   description:
-    'Qyne generates coach-approved strength & conditioning plans for cricket and badminton academies in India.',
-  locations: 'Bangalore · Hyderabad · India',
-  email: 'support@qyne.in',
+    'QYNE turns wearable data, smartphone assessments and cricket biomechanics into a personalized, periodized training plan.',
+  locations: 'Bangalore · India',
+  email: 'support@qyne.one',
 } as const
 
 /** Primary navigation — used by Nav and the demo CTA. */
@@ -33,22 +33,15 @@ export const WEARABLES = [
   'Polar',
 ] as const
 
-/** Placeholder partner academies. */
-export const TRUST_ACADEMIES = [
-  'Karnataka Cricket Centre',
-  'Deccan Smash Badminton',
-  'Whitefield Sports Academy',
-] as const
-
 /** Footer link columns. */
 export const FOOTER_COLUMNS = [
   {
     title: 'Product',
     links: [
       { label: 'How it works', href: '/how-it-works' },
-      { label: 'For academies', href: '/for-academies' },
-      { label: 'For athletes', href: '/for-athletes' },
-      { label: 'Wearables', href: '/how-it-works#wearables' },
+      { label: 'Assessments', href: '/#assessments' },
+      { label: 'Cricket intelligence', href: '/#cricket' },
+      { label: 'Wearable', href: '/#wearable' },
     ],
   },
   {
@@ -65,7 +58,7 @@ export const FOOTER_COLUMNS = [
     links: [
       { label: 'Help centre', href: '/support' },
       { label: 'Status', href: '/support#status' },
-      { label: 'Contact', href: 'mailto:support@qyne.in' },
+      { label: 'Contact', href: 'mailto:support@qyne.one' },
       { label: 'Security report', href: '/security#disclosure' },
     ],
   },
@@ -84,6 +77,6 @@ export const FOOTER_COLUMNS = [
 export const DEMO_ROLES = [
   'Academy owner',
   'Head coach',
-  'S&C coach',
+  'Coach',
   'Other',
 ] as const

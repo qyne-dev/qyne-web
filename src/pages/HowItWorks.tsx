@@ -1,11 +1,19 @@
-import { PageStub } from '../components/layout/PageStub'
+import { Process } from '../components/sections/Process'
+import { CTA } from '../components/sections/CTA'
+import { Seo } from '../components/primitives/Seo'
 
 export default function HowItWorks() {
   return (
-    <PageStub
-      name="How it works"
-      path="/how-it-works"
-      blurb="A detailed walkthrough of the wearable data layer, the readiness model, and the coach approval loop is coming next."
-    />
+    <>
+      <Seo
+        title="How it works — QYNE"
+        description="From wearable signals and smartphone assessments to a periodized plan — how QYNE turns an athlete's data into training that compounds."
+        path="/how-it-works"
+      />
+      <div className="pt-16">
+        <Process />
+      </div>
+      <CTA />
+    </>
   )
 }

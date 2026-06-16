@@ -5,7 +5,6 @@ import { Container } from '../primitives/Container'
 import { buttonVariants } from '../primitives/Button'
 import { DashboardPreview } from '../visuals/DashboardPreview'
 import { EASE } from '../animations/ScrollReveal'
-import { TRUST_ACADEMIES } from '../../lib/site'
 
 const container: Variants = {
   hidden: {},
@@ -34,26 +33,27 @@ export function Hero() {
               <span className="inline-flex items-center gap-2 rounded-md border border-border bg-surface-2 px-3 py-1.5">
                 <span className="h-1.5 w-1.5 rounded-full bg-primary" />
                 <span className="label text-muted">
-                  Onboarding academies in Bangalore &amp; Hyderabad
+                  Now onboarding cricket academies in Bangalore
                 </span>
               </span>
             </motion.div>
 
             <motion.h1
               variants={item}
-              className="mt-6 text-balance text-[clamp(2.6rem,6.4vw,5.75rem)] font-medium leading-[1.04] tracking-[-0.03em]"
+              className="mt-6 text-balance text-[clamp(2.3rem,5.4vw,4.85rem)] font-medium leading-[1.05] tracking-[-0.03em]"
             >
-              The S&amp;C department your academy can’t afford to hire.
+              If you have a body, you are an athlete. QYNE is the intelligence to train like one.
             </motion.h1>
 
             <motion.p
               variants={item}
               className="mt-6 max-w-[34rem] text-[17px] leading-[1.6] text-muted sm:text-[18px]"
             >
-              Qyne generates coach-approved training plans for cricket and
-              badminton academies in India.{' '}
+              QYNE turns wearable data, smartphone assessments and cricket
+              biomechanics into a personalized, periodized plan — so every
+              athlete trains with data, not guesswork.{' '}
               <span className="text-ink">
-                Wearable-driven. Coach-led. Built for serious athletes.
+                Wearable-driven. Injury-aware. Built for cricket.
               </span>
             </motion.p>
 
@@ -71,24 +71,6 @@ export function Hero() {
                   className="transition-transform group-hover:translate-x-0.5"
                 />
               </Link>
-            </motion.div>
-
-            <motion.div variants={item} className="mt-12 border-t border-border pt-6">
-              <p className="label text-faint">
-                Trusted by 3 academies in Bangalore &amp; Hyderabad
-              </p>
-              <div className="mt-3.5 flex flex-wrap items-center gap-x-5 gap-y-2.5">
-                {TRUST_ACADEMIES.map((name, i) => (
-                  <span key={name} className="flex items-center gap-x-5">
-                    {i > 0 && (
-                      <span aria-hidden className="hidden h-3 w-px bg-border sm:block" />
-                    )}
-                    <span className="text-[13px] font-medium tracking-tight text-muted">
-                      {name}
-                    </span>
-                  </span>
-                ))}
-              </div>
             </motion.div>
           </motion.div>
 

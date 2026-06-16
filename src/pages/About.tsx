@@ -11,16 +11,16 @@ import { cn } from '../lib/utils'
 import { SITE } from '../lib/site'
 
 const STORY = [
-  'India produces extraordinary cricket and badminton talent every year. But injury rates among youth athletes are climbing, and most academies cannot afford a credentialed strength & conditioning coach. Athletes train hard, with very little structured load management. Qyne exists to close that gap.',
-  'Phase 1 of our work is a wearable-driven S&C platform that gives every academy the equivalent of an S&C coach in software — coach-approved plans, daily readiness scoring, parental consent flows for minors, and a full audit trail for liability. Built for the way Indian academies actually run, not retrofitted from Western SaaS.',
-  'We are not stopping there. Our long-term roadmap extends into video biomechanics, performance analytics, and a broader athletic intelligence platform. The goal is to make serious sports science available to every academy in the country — not just the ones at elite institutions.',
+  'India produces extraordinary cricket talent every year. But injury rates among youth athletes are climbing, and most train hard with very little structured load management or objective data. QYNE exists to close that gap — to give every athlete the intelligence to train like a professional.',
+  'Phase 1 fuses a wearable, lab-grade smartphone assessments and cricket biomechanics into one periodization engine: daily readiness scoring, jump and sprint testing, bowling and batting analysis, and a plan that adapts to each body. If you have a body, you are an athlete — and this is the mind for it.',
+  'We are not stopping at cricket. Our long-term roadmap extends across sports and deeper performance analytics, into a broader athletic intelligence platform. The goal is to make serious sports science available to every athlete in the country — not just the ones at elite institutions.',
 ]
 
 const VALUES = [
   {
     icon: HeartHandshake,
-    title: 'Coach-led, AI-assisted',
-    body: 'Every plan is reviewed and approved by a credentialed human coach. We respect coaches; we are not here to replace them.',
+    title: 'Coach-built intelligence',
+    body: 'The periodization engine is built on logic from credentialed sports-science coaches — credentialed-human-reviewed, never algorithm-alone.',
   },
   {
     icon: Database,
@@ -43,19 +43,19 @@ const TEAM = [
   {
     name: 'Founder name',
     role: 'Founder & CEO',
-    bio: 'Background in [sport or industry] — drove the decision to start Qyne after seeing the gap in S&C infrastructure across Indian academies firsthand. Placeholder bio.',
+    bio: 'Background in [sport or industry] — drove the decision to start Qyne after seeing the gap in athletic intelligence for Indian cricket firsthand. Placeholder bio.',
     initials: 'FN',
   },
   {
     name: 'Engineering lead',
     role: 'Co-founder & Engineering Lead',
-    bio: '[Years] of product engineering experience across [domains]. Leads platform, data pipeline, and the rules engine that powers every plan. Placeholder bio.',
+    bio: '[Years] of product engineering experience across [domains]. Leads platform, data pipeline, and the periodization engine that powers every plan. Placeholder bio.',
     initials: 'EL',
   },
   {
     name: 'Head of Sports Science',
     role: 'Co-founder & Head of Sports Science',
-    bio: 'Credentialed S&C coach with [NCA / NSNIS / certifications] and [years] of work with [cricket / badminton] academies. Owns the periodization logic and coach workflow. Placeholder bio.',
+    bio: 'Credentialed sports-science coach with [NCA / NSNIS / certifications] and [years] of work with cricket academies. Owns the periodization logic behind every plan. Placeholder bio.',
     initials: 'HS',
   },
 ]
@@ -63,8 +63,8 @@ const TEAM = [
 const ROLES = [
   'Senior ML / Computer Vision Engineer — cricket biomechanics',
   'Backend Engineer — Node, TypeScript, NestJS',
-  'Sports Science Consultant — S&C, cricket or badminton focus',
-  'Academy Partnership Manager — Bangalore / Hyderabad',
+  'Sports Science Consultant — cricket focus',
+  'Academy Partnership Manager — Bangalore',
 ]
 
 export default function About() {
@@ -72,7 +72,7 @@ export default function About() {
     <>
       <Seo
         title="About — Qyne"
-        description="The team, the values, and the long-term vision behind Qyne — the strength & conditioning platform for Indian sports academies."
+        description="The team, the values, and the long-term vision behind Qyne — the athletic intelligence platform for cricket."
         path="/about"
       />
 
@@ -85,13 +85,13 @@ export default function About() {
           <ScrollReveal>
             <Eyebrow>About Qyne</Eyebrow>
             <h1 className="mt-5 max-w-3xl text-balance text-[clamp(2.4rem,5vw,4rem)] font-medium leading-[1.05] tracking-[-0.025em]">
-              We are building the athletic intelligence platform Indian academies deserve.
+              We are building the athletic intelligence platform for cricket.
             </h1>
             <p className="mt-6 max-w-2xl text-[18px] leading-[1.6] text-muted">
               Started in 2026, Qyne is operated by {SITE.legalName} in Bangalore.
-              Our work today is wearable-driven strength &amp; conditioning. Our
-              roadmap extends into video biomechanics, performance analytics, and
-              a broader athletic intelligence platform.
+              Our work today fuses wearable data, smartphone assessments and
+              cricket biomechanics into one periodization engine. Our roadmap
+              extends across more sports and deeper performance analytics.
             </p>
             <p className="mt-6 text-[13px] text-faint">
               <strong className="text-muted">Note —</strong> team bios and partner
@@ -235,8 +235,8 @@ export default function About() {
               Want to see Qyne in your academy?
             </h2>
             <p className="mt-4 max-w-md text-[16px] leading-[1.6] text-primary-bg">
-              Three academies in Bangalore and Hyderabad are running our Phase 1
-              pilot. We are taking a small number of additional partners through 2026.
+              A small group of cricket academies in Bangalore are running our
+              Phase 1 pilot. We are taking a few more partners through 2026.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>

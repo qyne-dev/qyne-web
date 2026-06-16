@@ -1,7 +1,11 @@
 import { Hero } from '../components/sections/Hero'
 import { Problem } from '../components/sections/Problem'
-import { Process } from '../components/sections/Process'
-import { WearableShowcase } from '../components/sections/WearableShowcase'
+import { Wearable } from '../components/sections/Wearable'
+import { HealthTrends } from '../components/sections/HealthTrends'
+import { PlatformData } from '../components/sections/PlatformData'
+import { PeriodizationEngine } from '../components/sections/PeriodizationEngine'
+import { Assessments } from '../components/sections/Assessments'
+import { CricketIntelligence } from '../components/sections/CricketIntelligence'
 import { AcademiesPreview } from '../components/sections/AcademiesPreview'
 import { Credibility } from '../components/sections/Credibility'
 import { CTA } from '../components/sections/CTA'
@@ -11,14 +15,18 @@ export default function Home() {
   return (
     <>
       <Seo
-        title="Qyne — The S&C department your academy can't afford to hire"
-        description="Qyne generates coach-approved strength & conditioning plans for cricket and badminton academies in India. Wearable-driven. Coach-led."
+        title="Qyne — If you have a body, you are an athlete. QYNE is the intelligence to train like one"
+        description="QYNE fuses a screenless wearable, lab-grade smartphone assessments and cricket biomechanics into one periodization engine — the ultimate mind for the athletic body."
         path="/"
       />
       <Hero />
       <Problem />
-      <Process />
-      <WearableShowcase />
+      <Wearable />
+      <HealthTrends />
+      <PlatformData />
+      <PeriodizationEngine />
+      <Assessments />
+      <CricketIntelligence />
       <AcademiesPreview />
       <Credibility />
       <CTA />

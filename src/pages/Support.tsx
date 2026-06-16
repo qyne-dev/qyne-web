@@ -19,7 +19,7 @@ const CHANNELS = [
   {
     icon: MessageCircle,
     label: 'WhatsApp',
-    body: 'For pilot academies in Bangalore and Hyderabad — direct line to the team.',
+    body: 'For pilot academies in Bangalore — a direct line to the team.',
     cta: 'Message on WhatsApp',
     href: 'https://wa.me/910000000000',
   },
@@ -52,8 +52,8 @@ const FAQS = [
     a: 'Each athlete authorises a wearable provider once, through the in-app onboarding flow. We support Garmin, Apple Health, WHOOP, and Health Connect (Mi, Noise, boAt, and others). If an athlete has no device, the morning check-in works on its own.',
   },
   {
-    q: 'My head coach approves plans. What if they’re away?',
-    a: 'You can designate a backup approver for the squad. Plans always require human approval before they reach an athlete — the system will hold them until an approver is available.',
+    q: 'How are training plans generated?',
+    a: 'QYNE’s periodization engine turns each athlete’s wearable signals and smartphone assessments into a weekly plan, weighted by readiness and workload. Credentialed sports-science logic sits behind every recommendation.',
   },
   {
     q: 'How do I add or remove a parent on an athlete’s profile?',
@@ -61,7 +61,7 @@ const FAQS = [
   },
   {
     q: 'A wearable showed unusual data overnight. What should I do?',
-    a: 'Qyne confidence-weights every signal by device quality, so a noisy reading rarely changes the plan. If a signal looks clearly wrong, mark it as such in the athlete’s profile and the rules engine will exclude it from that day’s read.',
+    a: 'Qyne confidence-weights every signal by device quality, so a noisy reading rarely changes the plan. If a signal looks clearly wrong, mark it as such in the athlete’s profile and the periodization engine will exclude it from that day’s read.',
   },
   {
     q: 'Can parents request a copy or deletion of their child’s data?',

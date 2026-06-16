@@ -74,17 +74,17 @@ interface ProblemItem {
 const PROBLEMS: ProblemItem[] = [
   {
     illustration: <CostBars />,
-    stat: '₹15–25L',
-    unit: 'per year',
-    title: 'A full-time S&C coach is out of budget.',
-    body: 'A credentialed strength & conditioning coach costs ₹15–25 lakh a year. For a Tier-B academy that line never survives the budget — so athletes get no S&C at all.',
+    stat: 'Feel',
+    unit: 'over data',
+    title: 'Most cricketers train on feel.',
+    body: 'Without readiness, load and assessment data, training is guesswork — effort goes in, but fatigue and injury risk stay invisible until it’s too late.',
   },
   {
     illustration: <AthleteDots />,
     stat: '50–500',
     unit: 'athletes per coach',
     title: 'One coach can’t individualise at scale.',
-    body: 'A head coach managing 50 to 500 athletes physically cannot write and track a personal program for every body. The arithmetic simply doesn’t allow it.',
+    body: 'A coach managing 50 to 500 athletes physically cannot write and adapt a personal, periodized plan for every body. The arithmetic simply doesn’t allow it.',
   },
   {
     illustration: <InjuryLine />,
@@ -105,7 +105,7 @@ export function Problem() {
       <Container className="relative">
         <SectionHeading
           eyebrow="Why Qyne"
-          title="Indian academies have talent. They lack the structure to train it safely."
+          title="Cricket produces the talent. Few athletes get the intelligence to train it safely."
         />
 
         <Stagger className="mt-14 grid gap-5 md:grid-cols-3">

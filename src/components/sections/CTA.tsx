@@ -22,8 +22,8 @@ export function CTA() {
             Ready to train your athletes smarter?
           </h2>
           <p className="mt-4 max-w-md text-[16px] leading-[1.6] text-primary-bg">
-            We’re working with 3 academies in Bangalore and Hyderabad through
-            2026. Be one of them.
+            We’re onboarding a small group of cricket academies in Bangalore
+            through 2026. Be one of them.
           </p>
           <ul className="mt-7 space-y-3">
             {ASSURANCES.map((item) => (

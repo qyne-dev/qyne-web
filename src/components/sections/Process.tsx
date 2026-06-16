@@ -6,7 +6,7 @@ import {
   ConnectPanel,
   ReadPanel,
   ProposePanel,
-  ApprovePanel,
+  ProgressPanel,
 } from '../visuals/ProcessPanels'
 import { cn } from '../../lib/utils'
 
@@ -21,7 +21,7 @@ const STEPS: Step[] = [
   {
     n: '01',
     name: 'Connect',
-    body: 'Your athlete connects a Garmin, Apple Watch, WHOOP, or any Android wearable through Health Connect. No wearable? A 30-second morning check-in works just as well.',
+    body: 'Your athlete connects a WHOOP, Apple Watch, Garmin, Oura, Fitbit, or any Android wearable through Health Connect. No wearable? A 30-second morning check-in works just as well.',
     panel: <ConnectPanel />,
   },
   {
@@ -32,24 +32,24 @@ const STEPS: Step[] = [
   },
   {
     n: '03',
-    name: 'Propose',
-    body: 'A rules engine designed by certified S&C coaches turns those signals into a weekly training plan, tailored to each athlete’s readiness and workload.',
+    name: 'Periodize',
+    body: 'The periodization engine — built with certified sports-science coaches — turns those signals, plus smartphone assessments, into a weekly plan tailored to each athlete’s readiness and workload.',
     panel: <ProposePanel />,
   },
   {
     n: '04',
-    name: 'Approve',
-    body: 'Your head coach reviews the squad and approves in about 15 minutes every Monday. Athletes train the week with a plan they can trust.',
-    panel: <ApprovePanel />,
+    name: 'Perform & progress',
+    body: 'Athletes train the week with a plan they can trust. QYNE tracks the response, measures progress, and adapts the next block — so training compounds and stays injury-free.',
+    panel: <ProgressPanel />,
   },
 ]
 
 export function Process() {
   return (
-    <Section className="border-t border-border bg-surface">
+    <Section id="how-it-works" className="border-t border-border bg-surface">
       <SectionHeading
         eyebrow="How it works"
-        title="Wearable data in. Coach-approved plans out."
+        title="Wearable data in. A periodized plan out."
       />
 
       <div className="mt-16 flex flex-col gap-20 lg:mt-20 lg:gap-28">
