@@ -12,8 +12,12 @@ import { AcademiesPreview } from '../components/sections/AcademiesPreview'
 import { Credibility } from '../components/sections/Credibility'
 import { CTA } from '../components/sections/CTA'
 import { Seo } from '../components/primitives/Seo'
+import { useScrollSnap } from '../hooks/useScrollSnap'
 
 export default function Home() {
+  // Snap each landing section to the top as the scroll settles.
+  useScrollSnap('#main > section')
+
   return (
     <>
       <Seo
