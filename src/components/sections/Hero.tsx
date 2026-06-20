@@ -31,8 +31,8 @@ export function Hero() {
           {/* Left — message */}
           <motion.div variants={container} initial="hidden" animate="show">
             <motion.div variants={item}>
-              <span className="inline-flex items-center gap-2 rounded-md border border-border bg-surface-2 px-3 py-1.5">
-                <span className="h-1.5 w-1.5 rounded-full bg-primary" />
+              <span className="inline-flex max-w-full items-center gap-2 rounded-md border border-border bg-surface-2 px-3 py-1.5">
+                <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
                 <span className="label text-muted">
                   Now onboarding cricket academies in Bangalore
                 </span>
@@ -59,8 +59,8 @@ export function Hero() {
             </motion.p>
 
             <motion.div variants={item} className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
-              <Link to="/#demo" className={buttonVariants({ size: 'lg' })}>
-                Request a demo
+              <Link to="/signup" className={buttonVariants({ size: 'lg' })}>
+                Get started
               </Link>
               <Link
                 to="/how-it-works"

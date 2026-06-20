@@ -47,20 +47,31 @@ export function Wearable() {
   return (
     <Section id="wearable" className="border-t border-border">
       <SectionHeading
-        eyebrow="The wearable"
+        eyebrow="No wearable? Meet the QYNE band"
         title="Measures what matters. Insights that empower."
-        description="A screenless band that reads the signals serious training depends on — then hands them to the intelligence that turns them into a plan."
+        description="Don’t already own a band? The QYNE band is our own screenless fabric wearable — it reads the signals serious training depends on, then hands them to the intelligence that turns them into a plan."
       />
 
       <div className="mt-14 grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
         {/* Device + specs */}
         <ScrollReveal className="flex flex-col">
-          <div className="grid place-items-center rounded-xl border border-border bg-surface px-6 py-10">
+          <div className="relative grid flex-1 place-items-center overflow-hidden rounded-xl bg-bg px-4 py-8">
+            {/* The product render carries its own dark glow; a soft radial mask
+                feathers its rectangular edges into the card so there's no seam. */}
             <img
-              src="/platform/device.png"
+              src="/platform/band.png"
               alt="The QYNE band — a screenless fabric wearable"
+              width={1024}
+              height={1536}
               loading="lazy"
-              className="w-44 drop-shadow-2xl sm:w-52"
+              decoding="async"
+              className="relative w-full max-w-[300px]"
+              style={{
+                maskImage:
+                  'radial-gradient(ellipse 78% 70% at 50% 50%, #000 68%, transparent 100%)',
+                WebkitMaskImage:
+                  'radial-gradient(ellipse 78% 70% at 50% 50%, #000 68%, transparent 100%)',
+              }}
             />
           </div>
           <div className="mt-4 grid grid-cols-2 gap-3">

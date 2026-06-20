@@ -9,7 +9,7 @@ export default function NotFound() {
   return (
     <>
       <Seo
-        title="Page not found — Qyne"
+        title="Page not found — QYNE"
         description="The page you were looking for doesn't exist."
         path="/404"
       />

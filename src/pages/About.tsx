@@ -39,27 +39,6 @@ const VALUES = [
   },
 ]
 
-const TEAM = [
-  {
-    name: 'Founder name',
-    role: 'Founder & CEO',
-    bio: 'Background in [sport or industry] — drove the decision to start Qyne after seeing the gap in athletic intelligence for Indian cricket firsthand. Placeholder bio.',
-    initials: 'FN',
-  },
-  {
-    name: 'Engineering lead',
-    role: 'Co-founder & Engineering Lead',
-    bio: '[Years] of product engineering experience across [domains]. Leads platform, data pipeline, and the periodization engine that powers every plan. Placeholder bio.',
-    initials: 'EL',
-  },
-  {
-    name: 'Head of Sports Science',
-    role: 'Co-founder & Head of Sports Science',
-    bio: 'Credentialed sports-science coach with [NCA / NSNIS / certifications] and [years] of work with cricket academies. Owns the periodization logic behind every plan. Placeholder bio.',
-    initials: 'HS',
-  },
-]
-
 const ROLES = [
   'Senior ML / Computer Vision Engineer — cricket biomechanics',
   'Backend Engineer — Node, TypeScript, NestJS',
@@ -71,8 +50,8 @@ export default function About() {
   return (
     <>
       <Seo
-        title="About — Qyne"
-        description="The team, the values, and the long-term vision behind Qyne — the athletic intelligence platform for cricket."
+        title="About — QYNE"
+        description="The team, the values, and the long-term vision behind QYNE — the athletic intelligence platform for cricket."
         path="/about"
       />
 
@@ -83,12 +62,12 @@ export default function About() {
         />
         <Container className="relative">
           <ScrollReveal>
-            <Eyebrow>About Qyne</Eyebrow>
+            <Eyebrow>About QYNE</Eyebrow>
             <h1 className="mt-5 max-w-3xl text-balance text-[clamp(2.4rem,5vw,4rem)] font-medium leading-[1.05] tracking-[-0.025em]">
               We are building the athletic intelligence platform for cricket.
             </h1>
             <p className="mt-6 max-w-2xl text-[18px] leading-[1.6] text-muted">
-              Started in 2026, Qyne is operated by {SITE.legalName} in Bangalore.
+              Started in 2026, QYNE is operated by {SITE.legalName} in Bangalore.
               Our work today fuses wearable data, smartphone assessments and
               cricket biomechanics into one periodization engine. Our roadmap
               extends across more sports and deeper performance analytics.
@@ -103,7 +82,7 @@ export default function About() {
 
       <Section>
         <div className="grid gap-12 lg:grid-cols-[1fr_1.4fr] lg:gap-16">
-          <SectionHeading eyebrow="Our story" title="Why Qyne exists." />
+          <SectionHeading eyebrow="Our story" title="Why QYNE exists." />
           <ScrollReveal>
             <div className="space-y-5 text-[16px] leading-[1.72] text-muted">
               {STORY.map((p, i) => (
@@ -132,37 +111,6 @@ export default function About() {
                   {v.title}
                 </h3>
                 <p className="mt-2 text-[14px] leading-[1.6] text-muted">{v.body}</p>
-              </Card>
-            </Stagger.Item>
-          ))}
-        </Stagger>
-      </Section>
-
-      <Section id="team" className="border-t border-border">
-        <SectionHeading
-          eyebrow="Team"
-          title="Three founders. One mission."
-          description="A founder-led team, deliberately small while we ship Phase 1."
-        />
-        <Stagger className="mt-14 grid gap-5 md:grid-cols-3">
-          {TEAM.map((p) => (
-            <Stagger.Item key={p.role} className="h-full">
-              <Card className="flex h-full flex-col p-7">
-                <div className="grid h-14 w-14 place-items-center rounded-md border border-border bg-surface-2 font-mono text-[14px] tracking-wide text-primary">
-                  {p.initials}
-                </div>
-                <h3 className="mt-6 text-[1.1rem] font-medium tracking-tight text-ink">
-                  {p.name}
-                </h3>
-                <p className="mt-1 text-[13px] text-primary">{p.role}</p>
-                <p className="mt-4 text-[14px] leading-[1.62] text-muted">{p.bio}</p>
-                <a
-                  href={`mailto:${SITE.email}`}
-                  className="mt-6 inline-flex items-center gap-1.5 text-[13px] font-medium text-muted transition-colors hover:text-ink"
-                >
-                  Open to networking
-                  <ArrowRight size={13} />
-                </a>
               </Card>
             </Stagger.Item>
           ))}
@@ -232,7 +180,7 @@ export default function About() {
         <div className="grid gap-10 lg:grid-cols-2 lg:items-center lg:gap-16">
           <ScrollReveal>
             <h2 className="text-balance text-[clamp(2rem,3.6vw,3rem)] font-medium leading-[1.07] tracking-[-0.025em] text-bg">
-              Want to see Qyne in your academy?
+              Want to see QYNE in your academy?
             </h2>
             <p className="mt-4 max-w-md text-[16px] leading-[1.6] text-primary-bg">
               A small group of cricket academies in Bangalore are running our

@@ -40,7 +40,7 @@ export function Nav() {
   return (
     <header
       className={cn(
-        'fixed inset-x-0 top-0 z-50 border-b transition-colors duration-300',
+        'fixed inset-x-0 top-0 z-nav border-b transition-colors duration-300',
         scrolled || open
           ? 'border-border bg-bg/85 backdrop-blur-md'
           : 'border-transparent',
@@ -62,10 +62,16 @@ export function Nav() {
 
         <div className="flex items-center gap-2">
           <Link
-            to="/#demo"
+            to="/login"
+            className={cn(buttonVariants({ variant: 'ghost', size: 'sm' }), 'hidden lg:inline-flex')}
+          >
+            Log in
+          </Link>
+          <Link
+            to="/signup"
             className={cn(buttonVariants({ size: 'sm' }), 'hidden lg:inline-flex')}
           >
-            Request a demo
+            Sign up
           </Link>
           <button
             type="button"
@@ -106,10 +112,16 @@ export function Nav() {
                 </NavLink>
               ))}
               <Link
-                to="/#demo"
-                className={cn(buttonVariants({ size: 'lg' }), 'mt-2 w-full')}
+                to="/login"
+                className={cn(buttonVariants({ variant: 'secondary', size: 'lg' }), 'mt-2 w-full')}
               >
-                Request a demo
+                Log in
+              </Link>
+              <Link
+                to="/signup"
+                className={cn(buttonVariants({ size: 'lg' }), 'w-full')}
+              >
+                Sign up
               </Link>
             </div>
           </motion.div>

@@ -23,7 +23,7 @@ export default function Privacy() {
     <LegalPage
       eyebrow="Legal"
       title="Privacy Policy"
-      intro="How Qyne collects, uses, and protects personal data — written to be readable, and aligned with India's Digital Personal Data Protection Act, 2023."
+      intro="How QYNE collects, uses, and protects personal data — written to be readable, and aligned with India's Digital Personal Data Protection Act, 2023."
       path="/privacy"
       meta={{ effective: '01 June 2026', version: '1.0' }}
       toc={TOC}
@@ -36,7 +36,7 @@ export default function Privacy() {
 
       <LegalSection id="overview" title="1. Overview">
         <p>
-          This Privacy Policy explains what personal data Qyne collects when
+          This Privacy Policy explains what personal data QYNE collects when
           academies and athletes use our platform, how we use it, who we share
           it with, and the rights you have over it.
         </p>
@@ -49,10 +49,10 @@ export default function Privacy() {
 
       <LegalSection id="who" title="2. Who we are">
         <p>
-          {SITE.legalName} (<strong>“Qyne”</strong>) is the Data Fiduciary for
+          {SITE.legalName} (<strong>“QYNE”</strong>) is the Data Fiduciary for
           personal data processed through the Service, except where an academy
-          configures Qyne as its processor, in which case the academy is the
-          Fiduciary and Qyne is the Data Processor.
+          configures QYNE as its processor, in which case the academy is the
+          Fiduciary and QYNE is the Data Processor.
         </p>
       </LegalSection>
 

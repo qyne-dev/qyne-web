@@ -1,0 +1,170 @@
+/* ============================================================================
+   QYNE — DESIGN LANGUAGE
+   ----------------------------------------------------------------------------
+   The single source of truth for the visual system. Every color, type size,
+   spacing step, radius, shadow, z-layer, breakpoint and motion value lives
+   here as a design token.
+
+   This is a Tailwind v4 `@theme` block: each `--<namespace>-*` variable both
+   (a) becomes a CSS custom property available at runtime via var(), and
+   (b) generates matching utility classes. For example:
+
+       --color-primary    →  bg-primary / text-primary / border-primary
+       --radius-lg        →  rounded-lg
+       --text-h2          →  text-h2
+       --shadow-card      →  shadow-card
+       --ease-out-expo    →  ease-(--ease-out-expo)
+
+   Change a value here and it propagates everywhere. Do NOT hardcode hex
+   values, px sizes or ad-hoc shadows in components — reach for a token.
+   ============================================================================ */
+
+@theme {
+  /* --------------------------------------------------------------------------
+     1. COLOR — dark, near-monochrome with a single recovery-green accent.
+     Contrast ratios are quoted against --color-bg (#0a0e13) for AA awareness.
+     -------------------------------------------------------------------------- */
+
+  /* Surfaces — stacked from deepest background to raised cards. */
+  --color-bg: #0a0e13; /* page background (deepest)            */
+  --color-surface: #11161e; /* cards, panels                        */
+  --color-surface-2: #161d27; /* raised / inset elements, inputs      */
+  --color-border: #1f2731; /* hairline borders, dividers, grid     */
+
+  /* Text — three tiers of emphasis. */
+  --color-ink: #e8ecef; /* primary text        — ~14:1 (AAA)    */
+  --color-muted: #8a949d; /* secondary text      — ~5.4:1 (AA)    */
+  --color-faint: #6b747e; /* tertiary / labels   — ~3.6:1 (AA Large / UI only — avoid long body copy) */
+
+  /* Brand + semantic — each maps to a physiological meaning. */
+  --color-primary: #5dcaa5; /* recovery / ready / "go"              */
+  --color-primary-light: #9fe1cb; /* primary hover / emphasis             */
+  --color-primary-bg: #0d2219; /* tinted background behind primary     */
+  --color-warning: #fac775; /* caution / moderate load              */
+  --color-danger: #e24b4a; /* risk / overload / "stop"             */
+  --color-info: #85b7eb; /* analytical / neutral data            */
+  --color-accent: #afa9ec; /* sleep / biometric / secondary accent */
+
+  /* --------------------------------------------------------------------------
+     2. TYPOGRAPHY
+     Inter for UI/body, JetBrains Mono for data and code-like labels.
+     The type scale below is exposed as text-* utilities with sensible
+     line-heights baked in. Display sizes are fluid (clamp) so headings scale
+     smoothly from mobile to desktop without breakpoint juggling.
+     -------------------------------------------------------------------------- */
+  --font-sans: 'Inter Variable', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', 'Menlo', monospace;
+
+  /* Fluid display + heading scale — [font-size, line-height]. */
+  --text-display: clamp(2.3rem, 5.4vw, 4.85rem); /* hero h1            */
+  --text-display--line-height: 1.05;
+  --text-h1: clamp(2rem, 4vw, 3rem); /* page h1            */
+  --text-h1--line-height: 1.08;
+  --text-h2: clamp(1.7rem, 3.2vw, 2.4rem); /* section heading    */
+  --text-h2--line-height: 1.12;
+  --text-h3: 1.25rem; /* card / sub heading */
+  --text-h3--line-height: 1.3;
+
+  /* Body + supporting sizes. */
+  --text-lead: 1.125rem; /* intro paragraphs   */
+  --text-lead--line-height: 1.6;
+  --text-body: 1rem; /* default body       */
+  --text-body--line-height: 1.6;
+  --text-sm: 0.875rem; /* secondary copy     */
+  --text-sm--line-height: 1.55;
+  --text-xs: 0.8125rem; /* fine print, meta   */
+  --text-xs--line-height: 1.5;
+
+  /* --------------------------------------------------------------------------
+     3. SPACING
+     Tailwind's default 4px-based scale (gap-2 = 8px, p-6 = 24px, …) is kept.
+     The named tokens below capture our layout rhythm so it stays consistent.
+     -------------------------------------------------------------------------- */
+  --spacing-gutter: 1.25rem; /* mobile page gutter  (px-5)  */
+  --spacing-gutter-lg: 3rem; /* desktop page gutter (lg:px-12) */
+  --spacing-section: 8rem; /* desktop section padding (py-32) */
+  --spacing-content: 80rem; /* max content width  (1280px) */
+
+  /* --------------------------------------------------------------------------
+     4. RADII — sharp and technical. Never fully pill-shaped for containers.
+     -------------------------------------------------------------------------- */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 12px; /* large cards / auth panels */
+  --radius-2xl: 16px;
+
+  /* --------------------------------------------------------------------------
+     5. SHADOWS — used sparingly; depth comes mostly from surface layering.
+     -------------------------------------------------------------------------- */
+  --shadow-card: 0 1px 2px rgb(0 0 0 / 0.3);
+  --shadow-raised: 0 8px 30px rgb(0 0 0 / 0.35);
+  --shadow-glow: 0 0 40px color-mix(in srgb, var(--color-primary) 22%, transparent);
+
+  /* --------------------------------------------------------------------------
+     6. Z-INDEX — a small, explicit layering scale to avoid magic numbers.
+     Generates z-* utilities (z-nav, z-modal, …).
+     -------------------------------------------------------------------------- */
+  --z-index-base: 0;
+  --z-index-raised: 10;
+  --z-index-sticky: 40;
+  --z-index-nav: 50;
+  --z-index-overlay: 80;
+  --z-index-modal: 100;
+
+  /* --------------------------------------------------------------------------
+     7. BREAKPOINTS — mobile-first. Matches Tailwind defaults; documented here
+     so the responsive intent is explicit:
+       (base)  phones        <  640px
+       sm      large phones  ≥  640px
+       md      tablets       ≥  768px
+       lg      laptops       ≥ 1024px   ← primary desktop breakpoint
+       xl      desktops      ≥ 1280px
+       2xl     wide          ≥ 1536px
+     -------------------------------------------------------------------------- */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+
+  /* --------------------------------------------------------------------------
+     8. MOTION
+     Calm, decelerating, always brief. The easing values are mirrored in
+     src/components/animations/ScrollReveal.tsx (EASE) for Framer Motion, which
+     can't read CSS variables — keep the two in sync if you change them.
+     -------------------------------------------------------------------------- */
+  --ease-out-expo: cubic-bezier(0.22, 1, 0.36, 1); /* primary reveal easing */
+  --ease-in-out-soft: cubic-bezier(0.4, 0, 0.2, 1);
+
+  --duration-fast: 150ms;
+  --duration-base: 250ms;
+  --duration-slow: 550ms;
+
+  /* Continuous-loop animations (Framer Motion handles transition-based ones). */
+  --animate-pulse-ring: pulse-ring 2.8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-drift: drift 1.8s ease-in-out infinite;
+
+  @keyframes pulse-ring {
+    0% {
+      transform: scale(0.82);
+      opacity: 0.5;
+    }
+    70% {
+      opacity: 0;
+    }
+    100% {
+      transform: scale(2);
+      opacity: 0;
+    }
+  }
+  @keyframes drift {
+    0%,
+    100% {
+      opacity: 0.35;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+}

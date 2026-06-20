@@ -1,11 +1,15 @@
 /**
- * Qyne site-wide content constants.
+ * QYNE site-wide content constants.
  * Content is hardcoded by design — no CMS. Edit here.
  */
 
 export const SITE = {
-  name: 'Qyne',
-  legalName: 'Qyne Technologies Pvt Ltd',
+  name: 'QYNE',
+  legalName: 'QYNE Pvt Ltd',
+  /** Canonical origin — single source of truth for absolute URLs (SEO, OG). */
+  url: 'https://qyne.in',
+  /** Absolute URL of the social share image (1200×630). */
+  ogImage: 'https://qyne.in/og/qyne-og.png',
   tagline: 'If you have a body, you are an athlete. QYNE is the intelligence to train like one.',
   description:
     'QYNE turns wearable data, smartphone assessments and cricket biomechanics into a personalized, periodized training plan.',
@@ -16,12 +20,13 @@ export const SITE = {
 /** Primary navigation — used by Nav and the demo CTA. */
 export const NAV_LINKS = [
   { label: 'How it works', href: '/how-it-works' },
-  { label: 'For academies', href: '/for-academies' },
-  { label: 'For athletes', href: '/for-athletes' },
-  { label: 'About', href: '/about' },
+  { label: 'Wearable', href: '/wearable' },
+  { label: 'Assessments', href: '/assessments' },
+  { label: 'Periodization', href: '/periodization' },
+  { label: 'Cricket', href: '/cricket' },
 ] as const
 
-/** Wearable brands Qyne ingests data from. */
+/** Wearable brands QYNE ingests data from. */
 export const WEARABLES = [
   'Garmin',
   'Apple Watch',
@@ -39,9 +44,12 @@ export const FOOTER_COLUMNS = [
     title: 'Product',
     links: [
       { label: 'How it works', href: '/how-it-works' },
-      { label: 'Assessments', href: '/#assessments' },
-      { label: 'Cricket intelligence', href: '/#cricket' },
-      { label: 'Wearable', href: '/#wearable' },
+      { label: 'The wearable', href: '/wearable' },
+      { label: 'Assessments', href: '/assessments' },
+      { label: 'Periodization', href: '/periodization' },
+      { label: 'Cricket intelligence', href: '/cricket' },
+      { label: 'Performance system', href: '/performance' },
+      { label: 'Exercise library', href: '/exercise-library' },
       { label: 'Get the app', href: '/#app' },
     ],
   },

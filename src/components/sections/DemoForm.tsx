@@ -68,7 +68,7 @@ export function DemoForm() {
   function handleSubmit(e: FormEvent) {
     e.preventDefault()
     // No backend in this phase — log the request and show confirmation.
-    console.info('[Qyne] Demo request:', form)
+    console.info('[QYNE] Demo request:', form)
     setSubmitted(true)
   }
 

@@ -30,7 +30,7 @@ export function LegalPage({
 }: LegalPageProps) {
   return (
     <>
-      <Seo title={`${title} — Qyne`} description={intro} path={path} />
+      <Seo title={`${title} — QYNE`} description={intro} path={path} />
 
       <section className="relative overflow-hidden border-b border-border pt-32 pb-16 sm:pt-36 sm:pb-20">
         <div

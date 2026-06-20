@@ -2,6 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://qyne.in/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
   <url><loc>https://qyne.in/how-it-works</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qyne.in/wearable</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qyne.in/periodization</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qyne.in/assessments</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qyne.in/cricket</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://qyne.in/performance</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://qyne.in/exercise-library</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://qyne.in/for-academies</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://qyne.in/for-athletes</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://qyne.in/about</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>

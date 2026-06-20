@@ -52,9 +52,9 @@ export function Assessments() {
   return (
     <Section id="assessments" className="border-t border-border">
       <SectionHeading
-        eyebrow="Assessments"
-        title="Lab-grade testing, from a smartphone."
-        description="Advanced performance assessments with real, objective metrics — no extra equipment. Every test feeds straight into the periodization engine."
+        eyebrow="The test library"
+        title="Every test you need. One device."
+        description="From explosive power to running mechanics, each assessment returns objective, lab-grade metrics — and every result feeds the periodization engine."
       />
 
       <Stagger className="mt-14 grid gap-5 md:grid-cols-2">

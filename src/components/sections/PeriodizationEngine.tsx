@@ -1,4 +1,5 @@
-import { BrainCircuit, Watch, Smartphone, Activity, Dumbbell, ShieldCheck, Target, LineChart } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import { BrainCircuit, Watch, Smartphone, Activity, Dumbbell, ShieldCheck, Target, LineChart, ArrowRight } from 'lucide-react'
 import { Section, Container } from '../primitives/Container'
 import { Eyebrow } from '../primitives/Eyebrow'
 import { ScrollReveal, Stagger } from '../animations/ScrollReveal'
@@ -82,6 +83,19 @@ export function PeriodizationEngine() {
             ))}
           </Stagger>
         </div>
+
+        <ScrollReveal delay={0.15} className="mt-12 flex justify-center">
+          <Link
+            to="/periodization"
+            className="group inline-flex items-center gap-1.5 text-sm font-medium text-primary transition-colors hover:text-primary-light"
+          >
+            Explore the periodization model
+            <ArrowRight
+              size={15}
+              className="transition-transform group-hover:translate-x-0.5"
+            />
+          </Link>
+        </ScrollReveal>
       </Container>
     </Section>
   )

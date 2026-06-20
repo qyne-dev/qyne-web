@@ -61,7 +61,7 @@ const FAQS = [
   },
   {
     q: 'A wearable showed unusual data overnight. What should I do?',
-    a: 'Qyne confidence-weights every signal by device quality, so a noisy reading rarely changes the plan. If a signal looks clearly wrong, mark it as such in the athlete’s profile and the periodization engine will exclude it from that day’s read.',
+    a: 'QYNE confidence-weights every signal by device quality, so a noisy reading rarely changes the plan. If a signal looks clearly wrong, mark it as such in the athlete’s profile and the periodization engine will exclude it from that day’s read.',
   },
   {
     q: 'Can parents request a copy or deletion of their child’s data?',
@@ -114,8 +114,8 @@ export default function Support() {
   return (
     <>
       <Seo
-        title="Support — Qyne"
-        description="Help, account questions, security reports, and service status for Qyne customers."
+        title="Support — QYNE"
+        description="Help, account questions, security reports, and service status for QYNE customers."
         path="/support"
       />
 

@@ -17,14 +17,15 @@ export function AppLaunch() {
       <div className="grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
         {/* Message + store badges */}
         <ScrollReveal>
-          <Eyebrow>The QYNE app</Eyebrow>
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-3">
+            <Eyebrow>The QYNE app</Eyebrow>
+            <span className="inline-flex items-center gap-2 rounded-md border border-primary/30 bg-primary-bg px-3 py-1.5">
+              <span className="h-1.5 w-1.5 rounded-full bg-primary" />
+              <span className="label text-primary">Coming soon · 2026</span>
+            </span>
+          </div>
 
-          <span className="ml-0 mt-5 inline-flex items-center gap-2 rounded-md border border-primary/30 bg-primary-bg px-3 py-1.5">
-            <span className="h-1.5 w-1.5 rounded-full bg-primary" />
-            <span className="label text-primary">Coming soon · 2026</span>
-          </span>
-
-          <h2 className="mt-5 text-balance text-[clamp(2.15rem,3.8vw,3.35rem)] font-medium leading-[1.08] tracking-[-0.025em]">
+          <h2 className="mt-6 text-balance text-[clamp(2.15rem,3.8vw,3.35rem)] font-medium leading-[1.08] tracking-[-0.025em]">
             Your training brain, now in your pocket.
           </h2>
           <p className="mt-5 max-w-xl text-[17px] leading-[1.6] text-muted">

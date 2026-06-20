@@ -12,6 +12,8 @@ export function useLiveValue(base: number, jitter = 1, intervalMs = 3400): numbe
   useEffect(() => {
     if (reduced) return
     const id = window.setInterval(() => {
+      // Don't churn renders while the tab is backgrounded.
+      if (document.hidden) return
       const delta = Math.round((Math.random() * 2 - 1) * jitter)
       setValue(base + delta)
     }, intervalMs)

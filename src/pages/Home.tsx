@@ -1,11 +1,12 @@
 import { Hero } from '../components/sections/Hero'
 import { Problem } from '../components/sections/Problem'
-import { Wearable } from '../components/sections/Wearable'
+import { WearableSummary } from '../components/sections/WearableSummary'
 import { HealthTrends } from '../components/sections/HealthTrends'
-import { PlatformData } from '../components/sections/PlatformData'
 import { PeriodizationEngine } from '../components/sections/PeriodizationEngine'
-import { Assessments } from '../components/sections/Assessments'
-import { CricketIntelligence } from '../components/sections/CricketIntelligence'
+import { AssessmentsSummary } from '../components/sections/AssessmentsSummary'
+import { CricketSummary } from '../components/sections/CricketSummary'
+import { PerformanceSummary } from '../components/sections/PerformanceSummary'
+import { ExerciseLibrarySummary } from '../components/sections/ExerciseLibrarySummary'
 import { AppLaunch } from '../components/sections/AppLaunch'
 import { AcademiesPreview } from '../components/sections/AcademiesPreview'
 import { Credibility } from '../components/sections/Credibility'
@@ -16,18 +17,19 @@ export default function Home() {
   return (
     <>
       <Seo
-        title="Qyne — If you have a body, you are an athlete. QYNE is the intelligence to train like one"
+        title="QYNE — If you have a body, you are an athlete. QYNE is the intelligence to train like one"
         description="QYNE fuses a screenless wearable, lab-grade smartphone assessments and cricket biomechanics into one periodization engine — the ultimate mind for the athletic body."
         path="/"
       />
       <Hero />
       <Problem />
-      <Wearable />
+      <WearableSummary />
       <HealthTrends />
-      <PlatformData />
+      <AssessmentsSummary />
       <PeriodizationEngine />
-      <Assessments />
-      <CricketIntelligence />
+      <CricketSummary />
+      <PerformanceSummary />
+      <ExerciseLibrarySummary />
       <AppLaunch />
       <AcademiesPreview />
       <Credibility />

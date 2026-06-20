@@ -20,7 +20,7 @@ export default function Security() {
   return (
     <LegalPage
       eyebrow="Trust"
-      title="Security at Qyne"
+      title="Security at QYNE"
       intro="How we protect academy and athlete data — written for the head coach, the academy owner, and the parent who wants to know what happens to their child's information."
       path="/security"
       meta={{ effective: '01 June 2026', version: '1.0' }}
@@ -34,7 +34,7 @@ export default function Security() {
 
       <LegalSection id="overview" title="1. Overview">
         <p>
-          Security at Qyne is built around three commitments: keep athlete data
+          Security at QYNE is built around three commitments: keep athlete data
           inside India, restrict access to the smallest set of people and
           systems that need it, and leave a verifiable trail of every action
           that affects a training plan.
@@ -43,7 +43,7 @@ export default function Security() {
 
       <LegalSection id="infra" title="2. Infrastructure">
         <p>
-          Qyne runs on managed Indian regions of a Tier-1 cloud provider, with
+          QYNE runs on managed Indian regions of a Tier-1 cloud provider, with
           redundancy across availability zones. Infrastructure is provisioned
           through code, reviewed in pull requests, and audited continuously.
         </p>
@@ -151,7 +151,7 @@ export default function Security() {
 
       <LegalSection id="disclosure" title="11. Responsible disclosure">
         <p>
-          If you believe you have found a security vulnerability in the Qyne
+          If you believe you have found a security vulnerability in the QYNE
           platform, please report it to{' '}
           <a href={`mailto:${SITE.email}`}>{SITE.email}</a> with the
           subject line <strong>“Security report”</strong>. We commit to:

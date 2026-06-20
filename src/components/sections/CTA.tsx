@@ -3,10 +3,12 @@ import { Section } from '../primitives/Container'
 import { ScrollReveal } from '../animations/ScrollReveal'
 import { DemoForm } from './DemoForm'
 
-const ASSURANCES = [
-  '3-month pilot at 50% off',
-  'No setup fee — cancel anytime',
-  'Full onboarding in under a week',
+// The core values QYNE stands for — what an academy actually buys into.
+const VALUES = [
+  'A periodized plan for every athlete',
+  'Injury-aware load — safer athletes',
+  'Coach-built — the coach stays in control',
+  'Built in India, for Indian academies',
 ]
 
 export function CTA() {
@@ -23,10 +25,11 @@ export function CTA() {
           </h2>
           <p className="mt-4 max-w-md text-[16px] leading-[1.6] text-primary-bg">
             We’re onboarding a small group of cricket academies in Bangalore
-            through 2026. Be one of them.
+            through 2026 — giving every athlete the intelligence to train like a
+            professional.
           </p>
           <ul className="mt-7 space-y-3">
-            {ASSURANCES.map((item) => (
+            {VALUES.map((item) => (
               <li key={item} className="flex items-center gap-2.5 text-[15px] text-bg">
                 <span className="grid h-5 w-5 shrink-0 place-items-center rounded-full bg-bg/10">
                   <Check size={13} className="text-bg" />

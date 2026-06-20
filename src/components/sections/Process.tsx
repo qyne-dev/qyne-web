@@ -27,7 +27,7 @@ const STEPS: Step[] = [
   {
     n: '02',
     name: 'Read',
-    body: 'Qyne reads HRV, sleep, resting heart rate, and training load — then confidence-weights every signal by the quality of the device it came from.',
+    body: 'QYNE reads HRV, sleep, resting heart rate, and training load — then confidence-weights every signal by the quality of the device it came from.',
     panel: <ReadPanel />,
   },
   {

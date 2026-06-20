@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowRight } from 'lucide-react'
+import type { LucideIcon } from 'lucide-react'
+import { ArrowRight, Target, ShieldCheck, ClipboardCheck, MapPin } from 'lucide-react'
 import { Section } from '../primitives/Container'
 import { SectionHeading } from '../primitives/SectionHeading'
 import { Card } from '../primitives/Card'
@@ -18,8 +19,8 @@ const FEATURES: Feature[] = [
   {
     mock: <RosterMock />,
     label: 'Monday roster',
-    title: 'See the whole squad at a glance.',
-    body: 'Every athlete’s readiness, sorted and colour-coded, the moment you open Monday morning.',
+    title: 'Every athlete’s readiness, every morning.',
+    body: 'The whole squad sorted and colour-coded the moment you open the app — who can push, who should hold.',
   },
   {
     mock: <WorkloadMock />,
@@ -31,8 +32,16 @@ const FEATURES: Feature[] = [
     mock: <ReportMock />,
     label: 'Parent reports',
     title: 'Keep parents informed, automatically.',
-    body: 'A clear monthly PDF on training, recovery, and load — generated for every athlete, no admin time.',
+    body: 'A clear monthly PDF on training, recovery and load — generated for every athlete, no admin time.',
   },
+]
+
+// The core purpose, applied to academies.
+const PRINCIPLES: { icon: LucideIcon; label: string }[] = [
+  { icon: Target, label: 'A periodized plan for every athlete' },
+  { icon: ShieldCheck, label: 'Injury-aware load management' },
+  { icon: ClipboardCheck, label: 'The coach stays in control' },
+  { icon: MapPin, label: 'Built for India' },
 ]
 
 export function AcademiesPreview() {
@@ -42,6 +51,7 @@ export function AcademiesPreview() {
         <SectionHeading
           eyebrow="For academies"
           title="Built for the way Indian academies actually run."
+          description="The same individualized, injury-aware intelligence a professional athlete gets — delivered across your whole squad, with the coach in control."
         />
         <ScrollReveal>
           <Link
@@ -70,6 +80,16 @@ export function AcademiesPreview() {
           </Stagger.Item>
         ))}
       </Stagger>
+
+      {/* Core purpose, applied — a slim principles bar */}
+      <ScrollReveal className="mt-10 flex flex-wrap items-center gap-x-7 gap-y-3 border-t border-border pt-6">
+        {PRINCIPLES.map((p) => (
+          <span key={p.label} className="flex items-center gap-2 text-[13px] text-muted">
+            <p.icon size={15} className="shrink-0 text-primary" />
+            {p.label}
+          </span>
+        ))}
+      </ScrollReveal>
     </Section>
   )
 }

@@ -17,7 +17,7 @@ export function PageStub({
 }) {
   return (
     <>
-      <Seo title={`${name} — Qyne`} description={blurb} path={path} />
+      <Seo title={`${name} — QYNE`} description={blurb} path={path} />
       <section className="grid min-h-[80vh] place-items-center pt-16">
         <Container className="text-center">
           <Eyebrow tone="muted">In progress</Eyebrow>
