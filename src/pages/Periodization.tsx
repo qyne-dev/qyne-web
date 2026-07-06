@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { Section } from '../components/primitives/Container'
 import { buttonVariants } from '../components/primitives/Button'
 import { Showcase } from '../components/visuals/Showcase'
+import { PhaseTimeline } from '../components/sections/PhaseTimeline'
 import { CTA } from '../components/sections/CTA'
 import { PageIntro } from '../components/sections/PageIntro'
 import { Seo } from '../components/primitives/Seo'
@@ -11,15 +12,15 @@ export default function Periodization() {
   return (
     <>
       <Seo
-        title="Periodization — QYNE | Train. Adapt. Perform."
-        description="QYNE's year-long periodization model for cricket: macro, meso and micro cycles that build volume, raise intensity and keep training load safe — peaking you at the right time."
+        title="Periodization — QYNE | Smarter skills. Peak performance. Injury free."
+        description="QYNE's skill-based periodization: a data-driven plan across five phases — prepare, develop, perform, peak and maintain — that builds technique, raises intensity and keeps training load safe, for any sport."
         path="/periodization"
       />
 
       <PageIntro
-        eyebrow="Periodization"
-        title="Train. Adapt. Perform."
-        subtitle="A year-long, data-driven plan that builds your base, sharpens your skill, and peaks you for the games that matter — without breaking you along the way."
+        eyebrow="Skill-based periodization"
+        title="Smarter skills. Peak performance. Injury free."
+        subtitle="A data-driven plan that builds your base, sharpens your skill and peaks you for the games that matter — across five phases, for any sport, without breaking you along the way."
       >
         <div className="mt-9 flex flex-wrap gap-3">
           <Link to="/#demo" className={cn(buttonVariants({ size: 'lg' }))}>
@@ -34,19 +35,21 @@ export default function Periodization() {
         </div>
       </PageIntro>
 
+      <PhaseTimeline />
+
       <Section className="border-t border-border">
         <div className="flex flex-col gap-20 lg:gap-28">
           <Showcase
             eyebrow="Year-long cycle"
-            title="One plan. Four phases. Twelve months."
-            body="Your year is mapped into four blocks, each with a clear job — so every week of training has a purpose that ladders up to peak performance."
+            title="One plan. Five phases. Twelve months."
+            body="Your year is mapped into clear blocks, each with a single job — so every week of training has a purpose that ladders up to peak performance, then holds it."
             image="/periodization/year-map.jpeg"
-            alt="QYNE year-long periodization map across GPP, SPP, PCP and in-season phases"
+            alt="QYNE year-long skill-based periodization map across prepare, develop, perform, peak and maintain phases"
             points={[
-              'GPP — foundation: build capacity & resilience',
-              'SPP — development: build specificity & skill',
-              'PCP — pre-competition: peak & prepare to perform',
-              'In-season: perform, maintain and adapt',
+              'Prepare & develop — build technique, capacity and skill',
+              'Perform — game simulation under pressure',
+              'Peak — sharpen for the competitions that matter',
+              'Maintain — hold form, adapt and re-assess',
             ]}
           />
 
@@ -83,7 +86,7 @@ export default function Periodization() {
             title="A balanced week: skill, training, rest."
             body="Each microcycle blends four skill sessions, three to four training sessions and a rest day. Five weeks form a block that builds, peaks, then deloads — so adaptation compounds and fatigue clears."
             image="/periodization/microcycle.jpeg"
-            alt="Weekly microcycle structure for a cricketer across a five-week block"
+            alt="Weekly microcycle structure for an athlete across a five-week block"
             points={[
               '4 skill + 3–4 training + 1 rest per week',
               'Build → build → peak → deload → recovery',
@@ -107,10 +110,10 @@ export default function Periodization() {
           <Showcase
             reversed
             eyebrow="Energy systems"
-            title="Cricket's demands shape the plan."
-            body="QYNE profiles the energy systems your sport actually uses, then prioritizes them — for cricket, that means explosive power and high-intensity capacity first, with an aerobic base underneath."
+            title="Your sport's demands shape the plan."
+            body="QYNE profiles the energy systems your sport actually uses, then prioritizes them — for a power sport like cricket, that means explosive power and high-intensity capacity first, with an aerobic base underneath."
             image="/periodization/energy-systems.jpeg"
-            alt="Cricket energy-system profile driving periodization priorities"
+            alt="Sport-specific energy-system profile driving periodization priorities"
             points={[
               'ATP-PC (power) and anaerobic capacity — high priority',
               'Aerobic base & lactate tolerance — supporting',
@@ -120,13 +123,13 @@ export default function Periodization() {
 
           <Showcase
             eyebrow="Skill periodization"
-            title="Bowling and batting, periodized too."
-            body="Skill work follows the same phased logic as physical training: build technique first, layer in variation and pressure, then sharpen for match performance — re-assessed every three months."
+            title="Sport skills, periodized too."
+            body="Skill work follows the same phased logic as physical training: build technique first, layer in variation and pressure, then sharpen for match performance — re-assessed as you progress. Phase 1 covers cricket's bowling and batting, with more sports on the way."
             image="/periodization/skill-periodization.jpeg"
-            alt="Periodization of cricket skill training across phases for bowling and batting"
+            alt="Periodization of sport skill training across prepare, develop, perform and peak phases"
             points={[
-              'Foundation → development → application → peak',
-              'Separate tracks for bowling and batting',
+              'Technique → timing → decision-making → game awareness',
+              'Sport-specific skill tracks (bowling & batting in cricket)',
               'Assess → analyze gaps → focus → re-assess',
             ]}
           />

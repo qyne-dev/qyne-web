@@ -81,7 +81,7 @@ const PROBLEMS: ProblemItem[] = [
     illustration: <GuessworkGauge />,
     stat: 'Feel',
     unit: 'over data',
-    title: 'Most cricketers train on feel.',
+    title: 'Most athletes train on feel.',
     body: 'Without readiness, load and assessment data, training is guesswork — effort goes in, but fatigue and injury risk stay invisible until it’s too late.',
     answer: 'A daily readiness score, from the wrist.',
   },
@@ -98,7 +98,7 @@ const PROBLEMS: ProblemItem[] = [
     stat: '3×',
     unit: 'in a decade',
     title: 'Preventable injuries are climbing.',
-    body: 'ACL tears and lumbar stress fractures in U-19 cricketers have roughly tripled in ten years — most of them load-management failures, not accidents.',
+    body: 'ACL tears and stress fractures in young athletes have roughly tripled in a decade — most of them load-management failures, not accidents.',
     answer: 'Injury-aware load, kept in the safe zone.',
   },
 ]
@@ -113,7 +113,7 @@ export function Problem() {
       <Container className="relative">
         <SectionHeading
           eyebrow="Why QYNE"
-          title="Cricket produces the talent. Few athletes get the intelligence to train it safely."
+          title="Every sport produces talent. Few athletes get the intelligence to train it safely."
         />
 
         <Stagger className="mt-14 grid gap-5 md:grid-cols-3">

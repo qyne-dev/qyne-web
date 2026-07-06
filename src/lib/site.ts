@@ -12,7 +12,7 @@ export const SITE = {
   ogImage: 'https://qyne.in/og/qyne-og.png',
   tagline: 'If you have a body, you are an athlete. QYNE is the intelligence to train like one.',
   description:
-    'QYNE turns wearable data, smartphone assessments and cricket biomechanics into a personalized, periodized training plan.',
+    'QYNE turns wearable data, smartphone assessments and sport-specific skill analysis into a personalized, periodized training plan.',
   locations: 'Bangalore · India',
   email: 'support@qyne.one',
 } as const
@@ -23,7 +23,7 @@ export const NAV_LINKS = [
   { label: 'Wearable', href: '/wearable' },
   { label: 'Assessments', href: '/assessments' },
   { label: 'Periodization', href: '/periodization' },
-  { label: 'Cricket', href: '/cricket' },
+  { label: 'Skill assessment', href: '/cricket' },
 ] as const
 
 /** Wearable brands QYNE ingests data from. */
@@ -47,7 +47,7 @@ export const FOOTER_COLUMNS = [
       { label: 'The wearable', href: '/wearable' },
       { label: 'Assessments', href: '/assessments' },
       { label: 'Periodization', href: '/periodization' },
-      { label: 'Cricket intelligence', href: '/cricket' },
+      { label: 'Skill assessment', href: '/cricket' },
       { label: 'Performance system', href: '/performance' },
       { label: 'Exercise library', href: '/exercise-library' },
       { label: 'Get the app', href: '/#app' },

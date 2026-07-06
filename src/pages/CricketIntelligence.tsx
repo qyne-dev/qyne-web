@@ -1,30 +1,32 @@
 import { Link } from 'react-router-dom'
 import { buttonVariants } from '../components/primitives/Button'
 import { PageIntro } from '../components/sections/PageIntro'
+import { SportGrid } from '../components/sections/SportGrid'
 import { CricketIntelligence as CricketAnalyses } from '../components/sections/CricketIntelligence'
 import { CTA } from '../components/sections/CTA'
 import { Seo } from '../components/primitives/Seo'
 import { cn } from '../lib/utils'
 
 /**
- * The full cricket-intelligence story:
- *   1. PageIntro — what computer-vision analysis means for the sport
- *   2. CricketAnalyses — the four detailed lenses (bowling, tracking, comparison, batting)
- *   3. CTA
+ * The full skill-assessment story:
+ *   1. PageIntro — skill-based, multi-sport, video-powered
+ *   2. SportGrid — the sports we cover (Cricket live as Phase 1)
+ *   3. CricketAnalyses — Phase 1 in depth (bowling, tracking, comparison, batting)
+ *   4. CTA
  */
 export default function CricketIntelligencePage() {
   return (
     <>
       <Seo
-        title="Cricket intelligence — QYNE | Biomechanics from video"
-        description="Computer-vision analysis purpose-built for cricket — bowling biomechanics, Hawk-eye ball tracking, batting mechanics and athlete comparison, all from a single phone video."
+        title="Skill-based assessment — QYNE | Sport-specific biomechanics from video"
+        description="Expert-built, video-powered skill assessment across sports. Cricket is live now as Phase 1 — bowling biomechanics, ball tracking, batting mechanics and athlete comparison, all from a single phone video."
         path="/cricket"
       />
 
       <PageIntro
-        eyebrow="Cricket intelligence"
-        title="Built for cricket. Down to the biomechanics."
-        subtitle="Computer-vision analysis purpose-built for the sport — bowling actions, ball tracking, batting mechanics and athlete comparison, all from a single video, all feeding one periodized plan."
+        eyebrow="Skill-based assessment"
+        title="Skill assessment for every sport."
+        subtitle="Sport-specific. Expert-built. Video-powered. A single phone video becomes objective skill data — all feeding one periodized plan. Cricket is live now as Phase 1, with more sports rolling out."
       >
         <div className="mt-9 flex flex-wrap gap-3">
           <Link to="/signup" className={cn(buttonVariants({ size: 'lg' }))}>
@@ -38,6 +40,8 @@ export default function CricketIntelligencePage() {
           </Link>
         </div>
       </PageIntro>
+
+      <SportGrid />
 
       <CricketAnalyses />
 

@@ -6,9 +6,9 @@ export function CricketIntelligence() {
   return (
     <Section id="cricket" className="border-t border-border bg-surface">
       <SectionHeading
-        eyebrow="Computer vision"
+        eyebrow="Phase 1 · Cricket"
         title="From one video, the whole game."
-        description="Point a phone at the nets and QYNE breaks the action down — bowling, ball flight, batting and athlete comparison, frame by frame."
+        description="Our first sport, in depth. Point a phone at the nets and QYNE breaks the action down — bowling, ball flight, batting and athlete comparison, frame by frame — with 2D-to-3D biomechanics and accurate metrics."
       />
 
       <div className="mt-16 flex flex-col gap-20 lg:gap-28">

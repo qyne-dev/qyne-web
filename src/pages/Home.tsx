@@ -4,7 +4,7 @@ import { WearableSummary } from '../components/sections/WearableSummary'
 import { HealthTrends } from '../components/sections/HealthTrends'
 import { PeriodizationEngine } from '../components/sections/PeriodizationEngine'
 import { AssessmentsSummary } from '../components/sections/AssessmentsSummary'
-import { CricketSummary } from '../components/sections/CricketSummary'
+import { SkillAssessment } from '../components/sections/SkillAssessment'
 import { PerformanceSummary } from '../components/sections/PerformanceSummary'
 import { ExerciseLibrarySummary } from '../components/sections/ExerciseLibrarySummary'
 import { AppLaunch } from '../components/sections/AppLaunch'
@@ -22,7 +22,7 @@ export default function Home() {
     <>
       <Seo
         title="QYNE — If you have a body, you are an athlete. QYNE is the intelligence to train like one"
-        description="QYNE fuses a screenless wearable, lab-grade smartphone assessments and cricket biomechanics into one periodization engine — the ultimate mind for the athletic body."
+        description="QYNE fuses a screenless wearable, lab-grade smartphone assessments and sport-specific skill analysis into one periodization engine — the ultimate mind for the athletic body."
         path="/"
       />
       <Hero />
@@ -31,7 +31,7 @@ export default function Home() {
       <HealthTrends />
       <AssessmentsSummary />
       <PeriodizationEngine />
-      <CricketSummary />
+      <SkillAssessment />
       <PerformanceSummary />
       <ExerciseLibrarySummary />
       <AppLaunch />
