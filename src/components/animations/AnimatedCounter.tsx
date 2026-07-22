@@ -32,11 +32,9 @@ export function AnimatedCounter({
   const [value, setValue] = useState(from)
 
   useEffect(() => {
-    if (!inView) return
-    if (reduced) {
-      setValue(to)
-      return
-    }
+    // Reduced-motion users get the final value straight from render (see
+    // `display` below), so the effect only drives the count-up animation.
+    if (!inView || reduced) return
     const controls = animate(from, to, {
       duration,
       delay,
@@ -46,10 +44,14 @@ export function AnimatedCounter({
     return () => controls.stop()
   }, [inView, reduced, from, to, duration, delay])
 
+  // Snap to the target for reduced motion once in view; otherwise show the
+  // animated value. Derived in render — no setState inside the effect.
+  const display = reduced && inView ? to : value
+
   return (
     <span ref={ref} className={className}>
       {prefix}
-      {value.toFixed(decimals)}
+      {display.toFixed(decimals)}
       {suffix}
     </span>
   )
