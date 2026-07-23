@@ -1,7 +1,9 @@
 import { motion, type Variants } from 'framer-motion'
 import type { ReactNode } from 'react'
 
-/** Shared easing — calm, decelerating. All reveals stay under 600ms. */
+/** Shared easing — calm, decelerating. All reveals stay under 600ms. Re-used by
+ *  the other animation helpers, so it's intentionally exported from here. */
+// eslint-disable-next-line react-refresh/only-export-components -- shared easing constant, not a component
 export const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1]
 
 interface ScrollRevealProps {

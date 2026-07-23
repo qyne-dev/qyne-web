@@ -2,7 +2,9 @@ import { cva, type VariantProps } from 'class-variance-authority'
 import type { ButtonHTMLAttributes } from 'react'
 import { cn } from '../../lib/utils'
 
-/** Sharp-cornered button styling — never pill-shaped. Shared with link-buttons. */
+/** Sharp-cornered button styling — never pill-shaped. Shared with link-buttons,
+ *  so it's intentionally colocated with Button and re-used across the app. */
+// eslint-disable-next-line react-refresh/only-export-components -- shared cva style helper, not a component
 export const buttonVariants = cva(
   'inline-flex items-center justify-center gap-2 rounded-md font-medium whitespace-nowrap transition-all duration-200 disabled:opacity-50 disabled:pointer-events-none',
   {

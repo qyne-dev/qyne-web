@@ -18,6 +18,7 @@ export function Nav() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
   const { pathname } = useLocation()
+  const [prevPath, setPrevPath] = useState(pathname)
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 16)
@@ -26,8 +27,13 @@ export function Nav() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  // Close the mobile menu whenever the route changes.
-  useEffect(() => setOpen(false), [pathname])
+  // Close the mobile menu whenever the route changes. Reset-on-route-change is
+  // done during render (React's "adjusting state on prop change" pattern) rather
+  // than in an effect, which avoids a cascading re-render.
+  if (pathname !== prevPath) {
+    setPrevPath(pathname)
+    setOpen(false)
+  }
 
   // Lock background scroll while the mobile menu is open.
   useEffect(() => {
