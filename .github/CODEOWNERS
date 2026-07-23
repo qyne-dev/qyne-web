@@ -1,0 +1,16 @@
+# Code owners for qyne-web.
+#
+# NOTE: CODEOWNERS auto-requests reviews only once the repo is on GitHub Team/
+# Enterprise with branch protection that requires code-owner review. On the free
+# plan this file is dormant documentation of ownership — it activates with zero
+# changes when the plan is upgraded. Replace @qyne-dev with real GitHub
+# usernames/teams as the team forms.
+#
+# Syntax: <path>  <@owner ...>. Last matching pattern wins.
+
+# Default owner for everything not matched below.
+*                 @qyne-dev
+
+# CI, repo workflow, and governance.
+/.github/         @qyne-dev
+/.githooks/       @qyne-dev
