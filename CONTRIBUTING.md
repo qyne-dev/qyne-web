@@ -47,8 +47,26 @@ hook enforces it locally:
 - [`.githooks/pre-push`](.githooks/pre-push) blocks direct pushes to `main`.
 - Emergency bypass (use deliberately): `git push --no-verify`.
 
+## Keeping the README current
+
+[README.md](README.md) is the front door to this repo and **must never drift from
+reality**. Before every push, check whether your change makes it wrong — if it
+does, fix it in the same PR. A PR that leaves the README stale should be sent
+back in review.
+
+Update it whenever a change touches:
+
+- setup or prerequisites (Node version, tooling)
+- environment variables
+- project structure or architecture
+- **routes/pages**, or the shared styling primitives and design tokens
+- scripts, CI gates, or the branching workflow
+
+If nothing in the README is affected, say so explicitly in the PR
+("README: no change needed") so it's a conscious call rather than an oversight.
+
 ## Definition of done
 
 - Lint and build (type-check) pass; CI is green.
 - No secrets or PII in code, logs, or fixtures.
-- Docs updated when behaviour changes.
+- **README is current** — updated in this PR, or explicitly confirmed unaffected.
