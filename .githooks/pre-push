@@ -1,18 +1,20 @@
 #!/bin/sh
 #
-# Interim guardrail: block direct pushes to the protected branch.
+# Interim guardrail: block direct pushes to the protected branches.
+#
+# develop is staging, main is production; both are PR-only.
 #
 # The qyne repos are on the GitHub free plan, where server-side branch protection
 # is unavailable for private repos. Until GitHub Team is enabled (which replaces
 # this with enforced protection), this client-side hook stops the common accident
-# of pushing straight to main. All changes must land via PR.
+# of pushing straight to main or develop. All changes must land via PR.
 #
 # Enabled repo-wide by `git config core.hooksPath .githooks` (run automatically by
 # the `prepare` script on `npm install`; see CONTRIBUTING.md).
 #
 # Emergency bypass (use only when you mean it): git push --no-verify
 
-protected_branches="main"
+protected_branches="main develop"
 
 while read -r _local_ref _local_sha remote_ref _remote_sha; do
 	branch=${remote_ref#refs/heads/}
