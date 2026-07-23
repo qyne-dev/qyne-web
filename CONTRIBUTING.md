@@ -1,7 +1,6 @@
 # Contributing — qyne-web
 
-How to work in this repository. Read this and any `AGENTS.md` / `CLAUDE.md` before
-writing code.
+How to work in this repository. Read this and any `AGENTS.md` before writing code.
 
 ## Prerequisites
 
@@ -32,10 +31,6 @@ PR.
 - **Conventional commits** (`feat:`, `fix:`, `chore:`, `docs:`, `refactor:`, `test:`).
 - Open a PR from your branch into `main`; it must pass CI and get a review.
   Prefer **squash-merge**.
-- Commit trailer for AI-assisted changes:
-  ```
-  Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>
-  ```
 
 ### Protected `main` (interim, free plan)
 
